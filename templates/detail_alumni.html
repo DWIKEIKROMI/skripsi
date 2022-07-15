@@ -1,0 +1,35 @@
+{% extends 'layout.html'%}
+{% block title %} detail_alumni {% endblock %}
+{%block content%}
+<div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4>{{ data['nama_alumni'] }}</h4><br>
+                  <p class="card-description">Prodi</p>
+                  <h4>{{ data['nama_prodi'] }}</h4><br>
+                  <p class="card-description">Minat</p>
+                  <h4>{{ data['minat'] }}</h4><br>
+                  <p class="card-description">Bakat</p>
+                  <h4>{{ data['bakat'] }}</h4><br>
+                  <p class="card-description">Mata Pelajaran Favorit</p>
+                  <h4>{{ data['mapel'] }}</h4><br>
+                  <p class="card-description">Rata-Rata Nilai</p>
+                  <h4>{{ data['nilai'] }}</h4><br>
+                  <p class="card-description">Pekerjaan Ibu</p>
+                  <h4>{{ data['ibu'] }}</h4><br>
+                  <p class="card-description">Pekerjaan Ayah</p>
+                  <h4>{{ data['ayah'] }}</h4><br>
+                  <p class="card-description">Penghasilan Orang Tua</p>
+                  <h4>{{ data['penghasilan'] }}</h4>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+{% endblock %}

@@ -1,0 +1,274 @@
+{% extends 'layout.html'%}{%block title %} SearchFromMinbak {% endblock %}{%block content%}
+<div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+              <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Pemilihan Minat</h4>
+                  <p class="card-description">Minat merupakan sesuatu yang dilakukan berdasarkan keinginan dalam diri sendiri atau kecenderungan rasa suka yang tinggi terhadap sesuatu. (Dapat memilih lebih dari 1 jawaban)</p>
+                  <form method="post" action="/searchdata">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="min1" value="Minat terhadap aktivitas yang berhubungan dengan mesin, alat, pekakas, dan daya mekanik" >
+                              Minat terhadap aktivitas yang berhubungan dengan mesin, alat, pekakas, dan daya mekanik
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="min2" value="Minat terhadap aktivitas yang dilakukan di luar ruangan."  >
+                             Minat terhadap aktivitas yang dilakukan di luar ruangan.
+                            </label>
+                          </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="min3" value="Minat terhadap aktivitas yang terkait dengan pengobatan." >
+                                Minat terhadap aktivitas yang terkait dengan pengobatan.
+                            </label>
+                          </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="min4" value="Minat terhadap aktivitas yang berkaitan dengan pekerjaan praktis, yang bisa dilakukan dengan keterampilan." >
+                                Minat terhadap aktivitas yang berkaitan dengan pekerjaan praktis, yang bisa dilakukan dengan keterampilan.
+                            </label>
+                          </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="min5" value="Minat terhadap aktivitas yang berhubungan dengan tugas rutin yang memerlukan ketelitian dan ketepatan dalam perhitungan." >
+                                Minat terhadap aktivitas yang berhubungan dengan tugas rutin yang memerlukan ketelitian dan ketepatan dalam perhitungan.
+                            </label>
+                          </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="min6" value="Minat terhadap aktivitas yang berkaitan dengan kesejahteraan masyarakat, keinginann menolong, membimbing dan menasehati, keinginan mengerti orang lain dan mempunyai ide." >
+                                Minat terhadap aktivitas yang berkaitan dengan kesejahteraan masyarakat, keinginann menolong, membimbing dan menasehati, keinginan mengerti orang lain dan mempunyai ide.
+                            </label>
+                          </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="min7" value="Minat terhadap aktivitas yang berkaitan dengan musik, baik memainkan, mendengarkan, bernyanyi atau membaca sesuatu yang berhubungan dengan musik." >
+                                Minat terhadap aktivitas yang berkaitan dengan musik, baik memainkan, mendengarkan, bernyanyi atau membaca sesuatu yang berhubungan dengan musik.
+                            </label>
+                          </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="min8" value="Minat terhadap aktivitas yang berkaitan dengan buku, kegiatan membaca, mengarang." >
+                                Minat terhadap aktivitas yang berkaitan dengan buku, kegiatan membaca, mengarang.
+                            </label>
+                          </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="min9" value="Minat terhadap aktivitas yang berkaitan dengan keindahan, bersifat seni dan menciptakan sesuatu yang bernilai seni." >
+                                Minat terhadap aktivitas yang berkaitan dengan keindahan, bersifat seni dan menciptakan sesuatu yang bernilai seni.
+                            </label>
+                          </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="min10" value="Minat yang berhubungan dengan manusia, diskusi, membujuk, bergaul dengan orang lain atau sesuatu yang membutuhkan kontak dengan masyarakat" >
+                                Minat yang berhubungan dengan manusia, diskusi, membujuk, bergaul dengan orang lain atau sesuatu yang membutuhkan kontak dengan masyarakat
+                            </label>
+                          </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="min11" value="Minat yang berhubungan dengan kreativitas dan analisis, penyelidikan dan eksperimen, kimia maupun pengetahuan umum." >
+                                Minat yang berhubungan dengan kreativitas dan analisis, penyelidikan dan eksperimen, kimia maupun pengetahuan umum.
+                            </label>
+                          </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="min12" value="Minat yang berhubungan dengan angka." >
+                                Minat yang berhubungan dengan angka.
+                            </label>
+                          </div><br>
+                          <h4 class="card-title">Pemilihan Bakat</h4>
+                          <p class="card-description">Bakat merupakan kemampuan yang dimiliki dari lahir dan dapat digunakan untuk melakukan hal-hal tertentu dengan lebih cepat dan lebih baik dibandingkan dengan orang biasa. (Dapat memilih lebih dari 1 jawaban)</p>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="bak1" value="Bakat terhadap aktivitas yang berhubungan dengan mesin, alat, pekakas, dan daya mekanik" >
+                              Bakat terhadap aktivitas yang berhubungan dengan mesin, alat, pekakas, dan daya mekanik
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="bak2" value="Bakat terhadap aktivitas yang dilakukan di luar ruangan."  >
+                             Bakat terhadap aktivitas yang dilakukan di luar ruangan.
+                            </label>
+                          </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="bak3" value="Bakat terhadap aktivitas yang terkait dengan pengobatan." >
+                                Bakat terhadap aktivitas yang terkait dengan pengobatan.
+                            </label>
+                          </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="bak4" value="Bakat terhadap aktivitas yang berkaitan dengan pekerjaan praktis, yang bisa dilakukan dengan keterampilan." >
+                                Bakat terhadap aktivitas yang berkaitan dengan pekerjaan praktis, yang bisa dilakukan dengan keterampilan.
+                            </label>
+                          </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="bak5" value="Bakat terhadap aktivitas yang berhubungan dengan tugas rutin yang memerlukan ketelitian dan ketepatan dalam perhitungan." >
+                                Bakat terhadap aktivitas yang berhubungan dengan tugas rutin yang memerlukan ketelitian dan ketepatan dalam perhitungan.
+                            </label>
+                          </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="bak6" value="Bakat terhadap aktivitas yang berkaitan dengan kesejahteraan masyarakat, keinginann menolong, membimbing dan menasehati, keinginan mengerti orang lain dan mempunyai ide." >
+                                Bakat terhadap aktivitas yang berkaitan dengan kesejahteraan masyarakat, keinginann menolong, membimbing dan menasehati, keinginan mengerti orang lain dan mempunyai ide.
+                            </label>
+                          </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="bak7" value="Bakat terhadap aktivitas yang berkaitan dengan musik, baik memainkan, mendengarkan, bernyanyi atau membaca sesuatu yang berhubungan dengan musik." >
+                                Bakat terhadap aktivitas yang berkaitan dengan musik, baik memainkan, mendengarkan, bernyanyi atau membaca sesuatu yang berhubungan dengan musik.
+                            </label>
+                          </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="bak8" value="Bakat terhadap aktivitas yang berkaitan dengan buku, kegiatan membaca, mengarang." >
+                                Bakat terhadap aktivitas yang berkaitan dengan buku, kegiatan membaca, mengarang.
+                            </label>
+                          </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="bak9" value="Bakat terhadap aktivitas yang berkaitan dengan keindahan, bersifat seni dan menciptakan sesuatu yang bernilai seni." >
+                                Bakat terhadap aktivitas yang berkaitan dengan keindahan, bersifat seni dan menciptakan sesuatu yang bernilai seni.
+                            </label>
+                          </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="bak10" value="Bakat yang berhubungan dengan manusia, diskusi, membujuk, bergaul dengan orang lain atau sesuatu yang membutuhkan kontak dengan masyarakat" >
+                                Bakat yang berhubungan dengan manusia, diskusi, membujuk, bergaul dengan orang lain atau sesuatu yang membutuhkan kontak dengan masyarakat
+                            </label>
+                          </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="bak11" value="Bakat yang berhubungan dengan kreativitas dan analisis, penyelidikan dan eksperimen, kimia maupun pengetahuan umum." >
+                                Bakat yang berhubungan dengan kreativitas dan analisis, penyelidikan dan eksperimen, kimia maupun pengetahuan umum.
+                            </label>
+                          </div>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="bak12" value="Bakat yang berhubungan dengan angka." >
+                                Bakat yang berhubungan dengan angka.
+                            </label>
+                          </div><br>
+                          <h4 class="card-title">Mata Pelajaran Favorit</h4>
+                          <p class="card-description">(Dapat memilih lebih dari 1 jawaban)</p>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="map1" value="bindo">
+                              Bahasa Indonesia
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="map2" value="binggris" >
+                              Bahasa Inggris
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="map3" value="mtk" >
+                              Matematika
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="map4" value="fisika" >
+                              Fisika
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="map5" value="kimia" >
+                              Kimia
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="map6" value="biologi" >
+                              Biologi
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="map7" value="ekonomi" >
+                              Ekonomi
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="map8" value="sejarah" >
+                              Sejarah
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="map9" value="geografi" >
+                              Geografi
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="map10" value="sosiologi" >
+                              Sosiologi
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="map11" value="olahraga" >
+                              Olahraga
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="map12" value="seni" >
+                              Seni Rupa & Budaya
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="map13" value="akuntansi" >
+                              Kewirausahaan
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="map14" value="komputer" >
+                              TIK / Komputer
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="map15" value="agama" >
+                              Agama
+                            </label>
+                          </div><br>
+                          <h4 class="card-title">Nilai Mata Pelajaran</h4>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input type="text" class="form-control form-control-lg" name="nmtk" placeholder="MTK">
+                            </div>
+                            <div class="form-group">
+                              <input type="text" class="form-control form-control-lg" name="nbiologi" placeholder="BIOLOGI">
+                            </div>
+                            <div class="form-group">
+                              <input type="text" class="form-control form-control-lg" name="nfisika" placeholder="FISIKA">
+                            </div>
+                            <div class="form-group">
+                              <input type="text" class="form-control form-control-lg" name="nkimia" placeholder="KIMIA">
+                            </div>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-rounded btn-fw">Olah Data</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+            </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'layout.html'%}{%block title %} Index {% endblock %}{%block content%}
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="row">
+                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                  <h3 class="font-weight-bold">{%if session ['name']%} Welcome, {{ session['name'] }} {%else%}{%endif%} </h3>
+                  <h6 class="font-weight-normal mb-0">All systems are running smoothly! You have <span class="text-primary">3 unread alerts!</span></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="col-md-6 mb-4 stretch-card transparent">
+                  <div class="card card-tale">
+                    <a href="/SearchFromMinbak">
+                      <div class="card-body">
+                      <h3 class="mb-4" style="color:#fff" align="center">Memilih Prodi Melalui Minat & Bakat Siswa</h3>
+                    </div>
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+
+{% endblock %}

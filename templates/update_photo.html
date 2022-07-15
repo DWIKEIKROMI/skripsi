@@ -1,0 +1,36 @@
+{% extends 'layout.html'%}
+{% block title %}Edit Photo{% endblock %}
+{% block content %}
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-title">Current Profile Photo</div>
+            <img src="{{url_for('static', filename='images/photo/' + session.get('photo', '') )}}" alt="user-avatar" class="d-block rounded" height="100%" width="100%" id="uploadedAvatar"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 grid-margin">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-title">Upload Profile Photo</div>
+            <form method="POST" enctype="multipart/form-data">
+              {% if error %}
+              <div class="mb-3">
+                <label class="form-label">Error: {{ error }}</label>
+              </div>
+              {% endif %}
+              <div class="mb-3">
+                <label for="photo" class="form-label">Photo</label>
+                <input class="form-control" type="file" id="photo" name="photo">
+              </div>
+              <button type="submit" class="btn btn-primary mr-2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

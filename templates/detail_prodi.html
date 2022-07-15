@@ -1,0 +1,32 @@
+{% extends 'layout.html'%}
+{% block title %} detail_prodi {% endblock %}
+{%block content%}
+<div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h1>{{ data['nama_prodi'] }}</h1>
+                  <h4 class="card-title">{{ data['keterangan'] }}</h4>
+                  <p class="card-description">Keahlian</p>
+                  <div class="template-demo">
+                    {% for keahlian in data['keahlian'] %}
+                    <button type="button" class="btn btn-primary">{{ keahlian }}</button>
+                    {% endfor %}
+                  </div>
+                  <br>
+                  <p class="card-description">Bidang Pekerjaan</p>
+                  <div class="template-demo">
+                    {% for output in data['output'] %}
+                    <button type="button" class="btn btn-success">{{ output }}</button>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+{% endblock %}

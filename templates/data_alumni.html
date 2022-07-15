@@ -1,0 +1,141 @@
+{% extends 'layout.html'%}
+{% block title %} data_alumni {% endblock %}
+{%block content%}
+<!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Kelola Data Alumni</h4>
+                  <a href="/upload" data-toggle="modal" data-target="#modaledit"><button type="button" class="btn btn-primary">Tambah Data Alumni</button></a>
+                  <a href="/download_form"><button type="button" class="btn btn-primary">Unduh Format Inputan Data</button></a>
+                  {{message}}
+                  <div class="table-responsive pt-3">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>No</th>
+                          <th>Nama</th>
+                          <th>Prodi / Jurusan</th>
+                          <th>Aksi</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for row in data%}
+
+                        <tr>
+                          <td>{{loop.index}}</td>
+                          <td>{{row.1}}</td>
+                          <td>{{row.2}}</td>
+
+                          <td>
+                            <a href="/detail_data/{{row.0}}"><button type="button" class="btn btn-success">Detail</button></a>
+                            <a href="/edit_data/{{row.0}}" data-toggle="modal" data-target="#modalupdate{{row.0}}"><button type="button" class="btn btn-warning">Edit</button></a>
+                            <a href="/hapusdata/{{row.0}}"><button type="button" class="btn btn-danger" onclick="return confirm('Yakin ingin dihapus?')">Delete</button></a>
+                          </td>
+                        </tr>
+                      <!-- The Modal -->
+                        <div id="modaledit" class="modal fade" role="dialog">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <!-- Modal Header -->
+                              <div class="modal-header">
+                                <h4 class="modal-title">Tambah Data Alumni</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+                              <!-- Modal body -->
+                              <div class="modal-body">
+                                <form class="forms-sample" action="/upload" method="POST" enctype="multipart/form-data">
+                                  <div class="form-group">
+                                    <label>Data Alumni</label>
+                                    <input type="file" class="form-control" name="file">
+                                  </div>
+                                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      <div id="modalupdate{{row.0}}" class="modal fade" role="dialog">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <!-- Modal Header -->
+                              <div class="modal-header">
+                                <h4 class="modal-title">Edit Data Alumni</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+                              <!-- Modal body -->
+                              <div class="modal-body">
+                                <form class="forms-sample" action="{{ url_for('edit_data') }}" method="POST">
+                                  <div class="form-group">
+                                    <label>Nama Alumni</label>
+<!--                                    <label>{{row}}</label>-->
+                                    <input type="hidden" class="form-control" name="id_alumni" value="{{row.0}}">
+                                    <input type="text" class="form-control" name="nama_alumni" value="{{row.1}}">
+                                  </div>
+                                  <div class="form-group">
+                                    <label> Nama Prodi</label>
+                                    <select name="nama_prodi" class="form-control form-control-lg">
+                                      {% for r in dp%}
+                                       {% if r.1 == row.2 %}
+                                      <option value="{{r.0}}" selected>{{r.1}}</option>
+                                      {% else %}
+                                      <option value="{{r.0}}">{{r.1}}</option>
+                                      {% endif%}
+                                      {% endfor%}
+                                    </select>
+                                  </div>
+                                  <div class="form-group">
+                                    <label>Minat</label>
+                                     <textarea class="form-control" name="minat" rows="3" style="line-height:150%">{{row.3}}</textarea>
+                                   </div>
+                                  <div class="form-group">
+                                    <label>Bakat</label>
+                                     <textarea class="form-control" name="bakat" rows="2" style="line-height:150%" value="{{row.4}}">{{row.4}}</textarea>
+                                   </div>
+                                  <div class="form-group">
+                                    <label>Mata Pelajaran</label>
+                                     <textarea class="form-control" name="mapel" rows="3" style="line-height:150%">{{row.5}}</textarea>
+                                   </div>
+                                  <div class="form-group">
+                                    <label>Nilai</label>
+                                     <textarea class="form-control" name="nilai" rows="2" style="line-height:150%">{{row.6}}</textarea>
+                                   </div>
+                                  <div class="form-group">
+                                    <label>Pekerjaan Ibu</label>
+                                     <textarea class="form-control" name="ibu" rows="3" style="line-height:150%">{{row.7}}</textarea>
+                                   </div>
+                                  <div class="form-group">
+                                    <label>Pekerjaan Ayah</label>
+                                     <textarea class="form-control" name="ayah" rows="2" style="line-height:150%">{{row.8}}</textarea>
+                                   </div><div class="form-group">
+                                    <label>Penghasilan</label>
+                                     <textarea class="form-control" name="penghasilan" rows="3" style="line-height:150%">{{row.9}}</textarea>
+                                   </div>
+
+                                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      {% endfor%}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+{% endblock %}

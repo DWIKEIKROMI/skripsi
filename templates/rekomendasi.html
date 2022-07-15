@@ -1,0 +1,24 @@
+{% extends 'layout.html'%}
+{% block title %}Detail Prodi{% endblock %}
+{% block content %}
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">
+              Rekomendasi Prodi
+            </h4>
+            <div class="template-demo">
+              {% for prodi in hasil %}
+              <a href="{{ url_for('detail_prodi', kode_prodi=prodi['kode_prodi']) }}" type="button" class="btn btn-success">
+                {{ prodi['nama_prodi'] }}
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
