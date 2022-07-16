@@ -117,22 +117,4 @@ pickle.dump(model, open('model.pkl', 'wb'))
 
 y_pred = model.predict(X_test)
 print("Accuracy: {:.2f}".format(accuracy_score(y_test, y_pred)))
-# print(f'y_pred: {y_pred}')
-#
-# print(f'predict: {y_pred[:3]}')
-# print(np.take(df, y_pred[:5], 0)['prodi'])
 
-# Solusi ambil 3 rekomendasi
-# docs: https://stackoverflow.com/questions/63123025/randomforestclassifier-get-top-n-predictions-and-respective-probabilities
-
-
-# -----------------------
-# Manual Random Forest
-
-# from random_forest import RandomForest, accuracy
-#
-# clf = RandomForest(n_trees=100)
-# clf.fit(X_train, y_train)
-#
-# y_pred = clf.predict(X_test)
-# print("Accuracy: {:.2f}".format(accuracy(y_test, y_pred)))

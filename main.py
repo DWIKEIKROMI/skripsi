@@ -146,14 +146,13 @@ def edit_profile():
             id = request.form['id']
             name = request.form['name']
             email = request.form['email']
-            photo = request.form['photo']
             notelepon = request.form['notelepon']
             cur = db.connection.cursor()
             cur.execute("""
                            UPDATE users
-                           SET name=%s, email=%s, photo=%s, notelepon=%s
+                           SET name=%s, email=%s, notelepon=%s
                            WHERE id=%s
-                        """, (name, email, photo, notelepon, id))
+                        """, (name, email, notelepon, id))
             flash("Data Updated Successfully")
             db.connection.commit()
             return redirect(url_for('profile'))
